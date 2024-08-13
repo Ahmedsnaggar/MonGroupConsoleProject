@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PersonNameSpace
+﻿namespace PersonNameSpace
 {
     public class Person
     {
@@ -63,12 +56,15 @@ namespace PersonNameSpace
         {
             return _Name;
         }
-
         public static int ShowNumber(int num1, int num2)
         {
             return num1 + num2;
         }
 
+        public virtual string ShowMessage()
+        {
+            return "Hello from Persons";
+        }
         #endregion
     }
 }

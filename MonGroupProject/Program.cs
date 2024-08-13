@@ -1,6 +1,7 @@
-﻿using PersonNameSpace;
+﻿using MonGroupProject.Classes;
+using PersonNameSpace;
 
-#region Luc05/08/2024
+#region Lec05/08/2024
 
 #region ListOfPersons
 
@@ -129,7 +130,7 @@
 //}
 #endregion
 
-#region Luc10/08/2024
+#region Lec10/08/2024
 #region Stack&Queue
 //Stack<int> stackList = new Stack<int>();
 
@@ -278,6 +279,8 @@
 #endregion
 
 #region Products
+
+
 //using MonGroupProject.Classes;
 
 //List<Products> productsList = new List<Products>();
@@ -294,16 +297,74 @@
 
 //foreach (Products product in productsList)
 //{
-//    product.CallMassege += Message;
-//    product.MyMessage(product);
-//    Console.WriteLine($"Product Name : {product.Name}, Price : {product.Price}, Quantity : {product.Qnt}, Total {product.CalcPrice(product.Price, product.Qnt)}");
+//    double total = product.CalcPrice(product.Price, product.Qnt);
+//    if(total > 500)
+//    {
+//        product.CalcTotalEvent += HighMessage;
+//    }else if(total < 500 && total > 200)
+//    {
+//        product.CalcTotalEvent += NormalMessage;
+//    }else if(total < 200)
+//    {
+//        product.CalcTotalEvent += LowMessage;
+//    }
+
+//    product.CalcTotalMethod(product);
+//    Console.WriteLine($"Product Name : {product.Name}, Price : {product.Price}, Quantity : {product.Qnt}, Total {total}");
 //}
 
-//void Message(Products product)
+//void HighMessage(Products product)
 //{
-//    Console.WriteLine(product.Name);
+//    Console.WriteLine($"Product {product.Name} Value High");
+//}
+//void NormalMessage(Products product)
+//{
+//    Console.WriteLine($"Product {product.Name} Value Normal");
+//}
+//void LowMessage(Products product)
+//{
+//    Console.WriteLine($"Product {product.Name} Value Low");
 //}
 
+#endregion
+#endregion
+
+#region Lec12/08/2024
+
+#region Events
+//CoffeeClass coffee1 = new CoffeeClass() { name = "Black", Pric= 250};
+//coffee1.OnOutOfBeansHadler += OrderBeans;
+//coffee1.OnOutOfBeansHadler += OrderLimit;
+//coffee1.OnOutOfBeansHadler -= OrderLimit;
+//coffee1.outOfBeans(coffee1);
+
+//void OrderBeans(CoffeeClass coffee)
+//{
+//    Console.WriteLine($"This beans of coffe {coffee.name} is out of stock, Please Order more beans");
+//}
+//void OrderLimit(CoffeeClass coffee)
+//{
+//    Console.WriteLine($"You Reached The limit");
+//}
+
+#endregion
+
+#region Inheritance
+//Employee employee1= new Employee() { };
+//Console.WriteLine(employee1.Name);
+
+//Customer customer1 = new CairoCustomers() ;
+//Console.WriteLine(customer1.getBalance());
+
+Person person1 = new Person();
+Console.WriteLine(person1.ShowMessage());
+Person employee1 = new Employee();
+Console.WriteLine(employee1.ShowMessage());
+Person admin1 = new Adminstration();
+Console.WriteLine(admin1.ShowMessage());
+
+Employee employee2 = new Employee();
+Console.WriteLine(employee2.Name);
 #endregion
 #endregion
 

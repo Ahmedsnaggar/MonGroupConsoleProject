@@ -8,15 +8,17 @@ namespace MonGroupProject.Classes
 {
     public class Products
     {
-        public delegate void ShowMessage(Products product);
-        public event ShowMessage CallMassege;
+        public delegate void CalcTotalHandler(Products products);
+        public event CalcTotalHandler CalcTotalEvent;
         public string Name { get; set; }
         public double Price { get; set; }
         public double Qnt { get; set; }
-        public void MyMessage(Products product)
+
+        public void CalcTotalMethod(Products products)
         {
-            CallMassege?.Invoke(product);
+            CalcTotalEvent?.Invoke(products);
         }
+
         public double CalcPrice(double price, double Qnt)
         {
             return price * Qnt;
