@@ -3,6 +3,7 @@
     public class Person
     {
         #region Fields
+        private int _id;
         private string _Name;
         private DateTime _DOB;
         private string _City;
@@ -12,6 +13,7 @@
         private Gender _Gender;
         #endregion
         #region Propeties
+        public int Id { get { return _id; } set { _id = value; } }
         public string Name { get { return _Name; } set { _Name = value; } }
         public DateTime DOB { get { return _DOB; } set { _DOB = value; } }
         public string City { get { return _City; } set { _City = value; } }
